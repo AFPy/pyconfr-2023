@@ -1,0 +1,57 @@
+{% extends '_layout.jinja2' %}
+
+{% block content %}
+  <article>
+    <h2>Actualités</h2>
+    <section>
+      <h3>PyConFr 2023</h3>
+
+      <p>
+        The 2023 edition of the francophone community's conference on Python will
+        be held in Bordeaux from February 16<sup>th</sup> to February
+        19<sup>th</sup> 2023.
+      </p>
+
+      <p>
+        The first two days are reserved for participative coding sessions. Developers
+        from different open source projects come to code together. Everyone is welcome
+        to contribute, and we seek to guide beginners. We provide the space and
+        environment (tables, chairs, internet connection... and coffee!). Represented
+        projects will be announced on our site as they register.
+      </p>
+
+      <p>
+        During the two following days, you will have the opportunity to attend to
+        presentations on various topics, about the Python programming language, its use
+        cases, good practices, feedbacks, shared ideas... A call for proposals is to be
+        announced soon.
+      </p>
+
+      <p>
+        This event is hosted by the Université de Bordeaux. Thanks to them :).
+      </p>
+
+      <p>
+        We ask everyone wishing to come to read the
+        <a href="{{ url_for('page', name='conduct', lang=lang) }}">code of conduct</a>.
+        We want this conference to be a welcoming event for
+        everyone. AFPy working group is mobilized to make everyone feel good
+        during the conference. Actions will be announced.
+      </p>
+
+      <p>
+        If you already want to organize your journey, we have prepared the
+        <a href="{{ url_for('page', name='venue', lang=lang) }}">Venue</a> page.
+      </p>
+
+      <p>
+        We have several other announcements for you in the coming weeks, so
+        follow us on <a href="https://twitter.com/pyconfr">Twitter</a>.
+      </p>
+
+      <p>
+        Come and chat with us on our <a href="https://t.me/pyconfr">Telegram group</a>.
+      </p>
+    </section>
+  </article>
+{% endblock content %}

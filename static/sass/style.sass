@@ -1,0 +1,293 @@
+// Colors
+$background: #ffffff
+$text: #000000
+$primary: #378899
+$secondary: #f6b36a
+$third: #fe6f61
+
+
+// Fonts
+@font-face
+  font-family: Fira Sans
+  font-weight: normal
+  src: url(/2023/static/fonts/FiraSans-Regular.otf)
+
+@font-face
+  font-family: Fira Sans
+  font-weight: bold
+  src: url(/2023/static/fonts/FiraSans-Bold.otf)
+
+
+// Common
+*
+  // No italic font available
+  font-style: normal !important
+
+html
+  color: $text
+  font-family: Fira Sans
+  font-size: 1.2em
+
+body
+  display: flex
+  flex-direction: column
+  margin: 0
+  min-height: 100vh
+
+h1
+  display: none
+
+h2, h3, h4
+  font-weight: normal
+  letter-spacing: .1em
+  margin: 2em 0 1em
+
+h2
+  text-transform: uppercase
+
+  &::after
+    background: $third
+    content: ''
+    display: block
+    height: 0.2em
+    margin: 0.2em 0
+    width: 2em
+
+a
+  color: $primary
+  text-decoration: inherit
+
+  &:hover, &:focus
+    text-decoration: underline
+
+address
+  white-space: pre-line
+
+
+ul li::marker
+  color: $third
+  content: '– '
+
+
+.button
+  background-color: $primary
+  color: white
+  display: block
+  margin: 1rem 0
+  padding: 1rem
+  max-width: max-content
+  transition: background-color 0.5s
+
+  &:hover, &:focus
+    background-color: lighten($primary, 15%)
+    text-decoration: inherit
+
+
+aside, nav, footer
+  background: $text
+  color: $background
+
+  ul
+    display: flex
+    flex-wrap: wrap
+    margin: 0
+    padding: 0
+
+    li
+      display: block
+
+      a
+        color: inherit
+        display: inline-block
+        padding: 0.5em 1em
+        text-decoration: inherit
+
+        &:hover, &:focus
+          background: lighten($primary, 15%)
+          text-decoration: inherit 
+
+      &.active a
+        background: $primary
+
+
+aside
+  align-self: flex-end
+  height: 0
+  z-index: 1
+
+  ul li
+    font-size: 0
+    opacity: 0.4
+    padding-right: 0.5rem
+    padding-top: 0.5rem
+
+    a::before
+      background: center / cover
+      content: ''
+      display: block
+      height: 1rem
+      width: 1.5rem
+
+    &#french a::before
+      background-image: url(/2023/static/images/france.svg)
+
+    &#english a::before
+      background-image: url(/2023/static/images/united-kingdom.svg)
+
+    &.active
+      opacity: 1
+
+      a
+        background: transparent
+
+footer ul
+  justify-content: center
+
+
+main
+  flex: 1
+
+  article > *
+    box-sizing: border-box
+    max-width: 95%
+    margin-left: auto
+    margin-right: auto
+    padding-left: 2rem
+    padding-right: 2rem
+    width: 70rem
+
+  article
+    overflow: auto
+    padding-bottom: 3em
+
+    &:not(:first-of-type)
+      border-top: 1px solid $secondary
+
+    section
+      margin-top: 4em
+
+    h3 a
+      color: inherit
+      cursor: text
+
+      &::after
+        content: '🔗'
+        cursor: pointer
+        margin-left: 0.5em
+
+    table
+      border-collapse: collapse
+      margin: 2em auto
+      width: 60rem
+
+      th
+        font-weight: normal
+
+      td
+        border: 1px solid $secondary
+        padding: 0.25em
+
+        &:not(:first-child)
+          text-align: center
+          width: 15%
+
+    iframe
+      border: 0
+      height: 25rem
+      margin: 1em 0
+      max-width: 100%
+      min-height: 60vh
+      overflow: hidden
+      padding: 0
+      width: 100%
+
+
+  .sponsors img
+    display: inline-block
+    line-height: 120px
+    max-height: 100px
+    margin: 1rem
+    vertical-align: middle
+    width: 200px
+
+
+#sponsors
+  .sponsor
+    max-width: 32em
+
+    > a
+      display: block
+      text-align: center
+      
+    .description
+      padding: 1.5rem
+      border-right: 5px solid $secondary
+      border-left: 5px solid $primary
+
+
+#index
+  article:first-child
+    font-size: 1.25em
+    text-align: center
+    overflow: auto
+
+    & + article
+      border-top: none
+
+    &::before
+      background: url(/2023/static/images/banniere.png) center / cover
+      content: ''
+      display: block
+      height: 100vh
+      position: absolute
+      top: 0
+      width: 100%
+      z-index: -1
+
+    h2
+      font-size: 0
+
+    .button
+      display: block
+      left: 50%
+      margin: 0 auto
+      padding: 1.25rem
+      position: absolute
+      top: 55vh
+      transform: translate(-50%, 0)
+      width: auto
+
+    p
+      margin: 2em auto
+      width: 65%
+
+      &:first-of-type
+        color: $primary
+        font-size: 1.5em
+        font-weight: bold
+        line-height: 20vh
+        margin-top: 75vh
+
+        sup
+          font-size: 0.7em
+          line-height: 1
+
+  #place img
+    max-width: 15em
+
+
+@media (max-width: 800px)
+  html
+    font-size: 1em
+
+  nav, footer
+    ul li a
+      font-size: 0.9em
+      padding: 0.5em
+
+  aside ul
+    flex-direction: column
+
+  main article table
+    font-size: 0.9em
+    width: auto

@@ -1,0 +1,95 @@
+{% extends '_layout.jinja2' %}
+
+{% block content %}
+  <article>
+    <h2>Schedule</h2>
+
+    <section>
+      <h3>Conferences and Workshops</h3>
+      <p>
+        Saturday, February 18<sup>th</sup> and Sunday, February 19<sup>th</sup>.
+      </p>
+      <p>
+        <em>
+          Schedule will be available in early February. If you want to participate, please
+          <a href="https://cfp-2023.pycon.fr/cfp/">propose your conference or workshop
+            subject</a>.
+        </em>
+      </p>
+    </section>
+
+    <section>
+      <h3>Participative Coding ("Sprints")</h3>
+      <p>
+        Thursday, February 16<sup>th</sup> and Friday, February 17<sup>th</sup>.
+      </p>
+      <p>
+        <em>
+          Schedule will be available in early February. If you want to participate, please
+          <a href="https://cfp-2023.pycon.fr/cfp/">propose your sprint subject</a>.
+        </em>
+      </p>
+    </section>
+
+    {#
+    <section>
+      <h3>Calendar</h3>
+      <p>
+        The calendar will be available soon.
+      </p>
+      <p>
+        The calendar is available below, in a <a class="button" href="{{ url_for('schedule', lang=lang) }}">fullscreen page</a>, or
+        <a class="button" href="{{ url_for('calendar') }}">in your favourite
+          calendar application</a>.
+      </p>
+      <p>
+        You can read the description of
+        <a href="{{ url_for('talks', lang=lang, category='keynote') }}">keynotes</a>,
+        <a href="{{ url_for('talks', lang=lang, category='conference') }}">talks</a>,
+        <a href="{{ url_for('talks', lang=lang, category='workshop')}}">workshops</a> and
+        <a href="{{ url_for('talks', lang=lang, category='sprint') }}">sprints</a>.
+      </p>
+      <iframe src="{{ url_for('schedule', lang=lang) }}"></iframe>
+    </section>
+    #}
+
+    <section id="register">
+      <h3>Registration</h3>
+      <p>
+        Registration is not opened yet.
+      </p>
+      <p>
+        PyConFr's sprints, talks and workshops are free.
+      </p>
+      <p>
+        However, <strong>registration is mandatory for everyone</strong>,
+        including organization staff, volunteers, speakers and sponsors.
+      </p>
+      <p>
+        You can also support <a href="https://afpy.org/">AFPy</a>, the
+        association organizing PyConFr, with
+        a <a href="https://www.helloasso.com/associations/afpy/collectes/dons">donation</a>.
+        If you want to vote during its general assembly on Sunday morning, you
+        must <a href="https://www.afpy.org/adhesions">become a member</a> before
+        January 31<sup>st</sup>.
+      </p>
+    </section>
+
+    <section id="dinner">
+      <h3>Saturday night dinner</h3>
+      <p>
+        A dinner is organized on Saturday night, from 7:30 PM to 11:00 PM,
+        in <a href="https://www.bordeaux.fr/l11032/agora-du-haut-carre">Haut-Carré</a>,
+        only for the ones who chose the option during their registration.
+      </p>
+      <p>
+        This dinner includes a cocktail buffet with petit fours and soft and
+        alcoholic drinks.
+      </p>
+      <p>
+        Other alcoholic drinks can be bought (not included in the price) during the
+        dinner.
+      </p>
+    </section>
+  </article>
+{% endblock content %}

@@ -1,0 +1,63 @@
+@font-face
+  font-family: dosis
+  font-weight: normal
+  src: url(/2019/static/fonts/Dosis-Regular.otf)
+
+html
+  font-family: dosis
+  padding: 0
+
+body
+  margin: 0
+  padding: 0
+
+  column
+
+table
+  border-spacing: 1px
+
+  em
+    display: inline-block
+    font-size: 0.8em
+    font-style: normal
+    padding: 0.5em 0
+
+tr td
+  border-bottom: 1px solid #eee
+
+tr:first-child
+  position: -webkit-sticky
+  position: sticky
+  top: 0
+
+  td
+    background: white
+
+tr:nth-child(2), tr:nth-child(3)
+  display: none
+
+td
+  padding: 0.25em
+  text-align: center
+
+  &[colspan="9"]
+    padding: 1.5em 0 0.5em 0
+
+td:first-child
+  background: white
+  left: 0
+  position: -webkit-sticky
+  position: sticky
+
+a
+  color: inherit
+
+td:not(:hover) a
+  text-decoration: inherit
+
+.label
+  border-radius: 0.2em
+  display: inline-block
+  font-size: 0.8em
+  margin: 0.2em
+  padding: 0.2em

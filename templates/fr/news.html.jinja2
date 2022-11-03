@@ -1,0 +1,62 @@
+{% extends '_layout.jinja2' %}
+
+{% block content %}
+  <article>
+    <h2>Actualités</h2>
+
+    <section>
+      <h3>PyConFr 2023</h3>
+      <p>
+        L'édition 2023 de la conférence sur Python de la communauté francophone se
+        tiendra à Bordeaux du 16 février au 19 février 2023.
+      </p>
+
+      <p>
+        Les deux premiers jours sont réservés à des séances de développement
+        participatif. Les développeurs et développeuses de différents projets
+        <em>open source</em> se rejoignent pour coder ensemble. Chaque personne
+        est la bienvenue pour contribuer, et nous cherchons également à
+        accompagner les débutant·e·s. Nous fournissons l'espace et le matériel
+        nécessaire à l'organisation (tables, chaises, connexion internet…). Les
+        projets présents seront annoncés sur notre site au fur et à mesure de
+        leur inscription.
+      </p>
+
+      <p>
+        Les deux derniers jours sont consacrés à des conférences. Vous aurez
+        l'occasion de participer à des présentations sur des sujets variés,
+        autour du langage Python, de ses usages, des bonnes pratiques, des
+        retours d'expériences, des partages d'idées… Un appel à présentation sera
+        également lancé d'ici quelques temps.
+      </p>
+
+      <p>
+        Cet événement est hébergé par L'Université de Bordeaux. Merci pour leur
+        chaleureux accueil :).
+      </p>
+
+      <p>
+        Nous demandons à chaque personne souhaitant venir de lire le
+        <a href="{{url_for('page', name='conduct', lang=lang) }}">code de
+          conduite</a>. Nous souhaitons faire en sorte que cette conférence soit un
+        événement accueillant pour tout le monde. Le groupe de travail de l'AFPy
+        se mobilise pour faire que chacun·e se sente bien durant la
+        conférence. Nous vous annoncerons les actions.
+      </p>
+
+      <p>
+        Si vous souhaitez déjà organiser votre venue, nous vous avons préparé la page
+        <a href="{{ url_for('page', name='venue', lang=lang) }}">Venir</a>.
+      </p>
+
+      <p>
+        Nous vous réservons plusieurs autres annonces pour les semaines à venir, alors
+        suivez nous sur <a href="https://twitter.com/pyconfr">Twitter</a>.
+      </p>
+
+      <p>
+        Venez discuter avec nous sur notre <a href="https://t.me/pyconfr">groupe Telegram</a>.
+      </p>
+    </section>
+  </article>
+{% endblock content %}

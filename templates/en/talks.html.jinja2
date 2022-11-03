@@ -1,0 +1,29 @@
+{% extends '_layout.jinja2' %}
+
+{% set days = {'2023-02-18': 'Saturday', '2023-02-19': 'Sunday'} %}
+{% set titles = {'conference': 'Talks', 'workshop': 'Workshops', 'sprint': 'Sprints', 'keynote': 'Keynotes'} %}
+{% set page_name = category %}
+
+{% block content %}
+  <h2>{{ titles[category] }}</h2>
+
+  {% for talk in talks %}
+    <article id="{{ talk.title|slug }}">
+      <h3><a href="#{{ talk.title|slug }}">{{ talk.title }}</a></h3>
+      <p>
+        By {{ talk.person }}
+        {% if category == 'sprint' %}
+          {% if talk.id == '678' %}
+            - Friday, from 10:00 to 18:00
+          {% else %}
+            - Thursday and Friday, from 10:00 to 18:00
+          {% endif %}
+        {% else %}
+          − Room {{ talk.room }}
+          − {{ days[talk.day] }}, {{ talk.start }}
+        {% endif %}
+      </p>
+      {{ talk.description | safe }}
+    </article>
+  {% endfor %}
+{% endblock content %}

@@ -1,0 +1,142 @@
+{% extends '_layout.jinja2' %}
+
+{% block content %}
+  <article>
+    <h2>The venue</h2>
+    <section>
+      <h3>Address</h3>
+      <p>
+        PyConFr 2023 is held at the <a href="https://www.u-bordeaux.fr/">Université
+        de Bordeaux</a>, on
+        the <a href="https://www.u-bordeaux.fr/Universite/Campus/Campus-Talence-Pessac-Gradignan">Campus
+        de Talence</a>.
+      </p>
+      <address>
+        Université de Bordeaux
+        Bâtiment A22
+        351 Cours de la Libération
+        33400 Talence
+      </address>
+      <p>
+        GPS coordinates: 44.8073 -0.5988
+      </p>
+      {{ map('Fullscreen') }}
+    </section>
+
+    <section>
+      <h3>Reach the Campus</h3>
+
+      <section>
+        <h4>From the center (~30 minutes)</h4>
+        <p>
+          You can reach the campus by
+          the <a href="https://www.infotbm.com/info/line/tbt-60">tram B</a>
+          and stop at the "Béthanie" station.
+        </p>
+      </section>
+
+      <section>
+        <h4>From the train station (~25 minutes)</h4>
+        <p>
+          From the train station, you can reach the campus by the
+          <a href="https://www.infotbm.com/info/line/tbc-10">Bus line 10</a>
+          at stop at the "Peixotto" stop.
+        </p>
+      </section>
+
+      <section>
+        <h4>From Bordeaux Airport (~1 heure ± 15 minutes)</h4>
+        <p>
+          From the Bordeaux-Mérignac airport, multiple route with regards to the schedule.
+          In any case you will have only one connection:
+          <ul>
+            <li>you can either take the
+              <a href="https://www.infotbm.com/info/line/tbc-01">Bus line 1</a>
+	      or the <a href="https://www.infotbm.com/info/line/tbc-48">Bus line 48</a>
+	      to connect with the <a href="https://www.infotbm.com/info/line/tbt-60">tram B</a>,
+            </li><li>
+	      you can also take the <a href="https://www.infotbm.com/info/line/tbc-01">Bus line 1</a> to connect with either the
+	      <a href="https://www.infotbm.com/info/line/tbc-20">Bus line 20</a> or the
+	      <a href="https://www.infotbm.com/info/line/tbc-34">Bus line 34</a>.
+            </li>
+          </ul>
+        </p>
+      </section>
+
+      <section>
+        <h4>Self-Service Bikes (~45 minutes)</h4>
+        <p>
+          You can also reach the campus
+          using <a href="https://www.infotbm.com/en/v3.html">self-service
+          bikes (called "V3")</a>, at the Arts et Métiers (#112) station.
+        </p>
+      </section>
+    </section>
+
+    <section>
+      <h3>Travelling to Bordeaux</h3>
+
+      <section>
+        <h4>Car</h4> 
+        <p>It will be possible to park on the university parking</p>
+      </section>
+
+      <section>
+        <h4>Train</h4>
+        <p>The TGV stops at Saint-Jean Bordeaux Train station, next to
+          Bordeaux city center. It is quite handy to take a bus or a
+          tram from there to get to the university.</p>
+      </section>
+
+      <section>
+        <h4>With the tram</h4>
+        <p>
+          Leaving the station, you can take the tram C and stop at
+          Quinconces station to connect with the tram B and stop at
+          the Béthanie station.
+
+          If you like to walk, you can also walk along the "Cours de
+          la Marne" for about 1.8 km and take the Tram B from "Place
+          de la Victoire".
+        </p>
+      </section>
+
+      <section>
+        <h4>With the Bus</h4>
+        <p>
+          <a href="https://www.infotbm.com/info/line/tbc-10">The Bus
+            line 10</a> stops at "Peixotto" next to the University
+          entrance.
+        </p>
+      </section>
+
+      <section>
+        <h4>Plane</h4>
+        <p>Land at the Bordeaux-Mérignac airport and reach the tram to
+          get to the university.</p>
+      </section>
+    </section>
+
+    <section>
+      <h3>Housing Advice</h3>
+      <section>
+        <h4>In Bordeaux</h4>
+        <p>
+	  Try to find an accomodation close to the
+          <a href="https://www.infotbm.com/info/line/tbt-60">tram B line</a>,
+          the fastest way to reach the university.
+        </p>
+      </section>
+      <section>
+        <h4>On the campus</h4>
+        <p>
+	  There are two options not to far from the campus.
+	  <ul>
+	    <li><a href="https://www.teneo.fr/">Ténéo Apparthotel Talence (70€-80€ per night)</a> — About 10 minutes walk</li>
+            <li><a href="https://sejours-affaires.com">Séjours & Affaires Bordeaux Yser (~60€ per night)</a> — About 23 minutes of tram</li>
+	  </ul>
+        </p>
+      </section>
+    </section>
+  </article>
+{% endblock content %}

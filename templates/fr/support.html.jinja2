@@ -1,0 +1,133 @@
+{% extends '_layout.jinja2' %}
+
+{% block content %}
+  <article>
+    <h2>Nous soutenir</h2>
+    <section>
+      <h3>Nous aider avant et pendant l'événement</h3>
+
+      <p>
+        Si vous souhaitez nous aider pour la préparation de l'événement, et/ou
+        lors de l'événement, n'hésitez pas à nous contacter à
+        <a href="mailto:contact@afpy.org">contact@afpy.org</a>.
+      </p>
+
+      <p>
+        Toute aide bénévole lors de l'événement est la bienvenue !
+      </p>
+    </section>
+
+    <section>
+      <h3>Financer PyConFr</h3>
+
+      <p>
+        Le mécénat nous permet chaque année de couvrir les frais comme la
+        sécurité, des boissons chaudes et fraîches, le nettoyage, la captation
+        vidéo…
+      </p>
+
+      <p>
+        PyConFr est organisé par des bénévoles de la communauté Python
+        francophone et permet à cette communauté de se rencontrer, d'échanger et
+        de grandir chaque année.
+      </p>
+
+      <p>
+        Si vous souhaitez nous soutenir financièrement, vous pouvez contacter le
+        trésorier de l'AFPy
+        (<a href="mailto:tresorier@afpy.org">tresorier@afpy.org</a>) afin de
+        discuter des détails.
+      </p>
+
+      <p>
+        L'appel à sponsors est désormais terminé.
+      </p>
+
+      <p>
+        Cette année, nous proposons les montants et contreparties suivantes :
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Bénéfice</th>
+            <th>Cœur (montant libre)</th>
+            <th>Bronze (500 €)</th>
+            <th>Argent (1000 €)</th>
+            <th>Or (2000 €)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Nom et logo sur <a href="{{ url_for('page', name='sponsors', lang=lang) }}">la page « Sponsors »</a></td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+          </tr>
+          <tr>
+            <td>Présentation de 1000 caractères sur <a href="{{ url_for('page', name='sponsors', lang=lang) }}">la page « Sponsors »</a></td>
+            <td>-</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+          </tr>
+          <tr>
+            <td>Logo sur <a href="{{ url_for('page', name='sponsors', lang=lang) }}">la page d'accueil</a></td>
+            <td>-</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+          </tr>
+          <tr>
+            <td>Logo sur les affiches et documents imprimés</td>
+            <td>-</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+          </tr>
+          <tr>
+            <td>Panneau dans les salles de conférence</td>
+            <td>-</td>
+            <td>-</td>
+            <td>✔</td>
+            <td>✔</td>
+          </tr>
+          <tr>
+            <td>Présentation de l'entreprise (2 min) en conférence plénière (samedi)</td>
+            <td>-</td>
+            <td>-</td>
+            <td>✔</td>
+            <td>✔</td>
+          </tr>
+          <tr>
+            <td>Stand dans le hall</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>✔</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- 
+           <section>
+           <p>
+           Trois niveaux « Platine » sont également disponibles. Ces niveaux
+           spéciaux comportent les bénéfices du niveau « Or », plus une contrepartie
+           particulière :
+           </p>
+           <h4>Transcription (4000 €)</h4>
+           <p>Votre logo sur l'écran de transcription textuelle et sur les vidéos sous-titrées grâce aux transcriptions.</p>
+           <h4>Boissons et viennoiseries (4000 €)</h4>
+           <p>Votre logo sur les tables accueillant les viennoiseries et les boissons.</p>
+           <h4>Vidéo (6000 €)</h4>
+           <p>Votre logo au début des captations vidéos.</p>
+           <br/>
+           </section>
+      -->
+      <p><strong>Les contreparties sont effectives dès réception du réglement.</strong></p>
+
+    </section>
+  </article>
+{% endblock content %}

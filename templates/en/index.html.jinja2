@@ -1,0 +1,89 @@
+{% extends '_layout.jinja2' %}
+
+{% block content %}
+  <article>
+    <h2>PyConFR 2023 Bordeaux</h2>
+    <a class="button" href="{{ url_for('page', name='schedule', lang=lang) }}">See Schedule</a>
+    <p>
+      February 16<sup>th</sup> – 19<sup>th</sup> 2023
+    </p>
+    <p>
+      Organized by <a href="https://afpy.org">AFPy</a>, this conference is
+      free, entirely coordinated by volunteers and dedicated to bringing
+      together people interested by the <a href="https://python.org">Python</a>
+      programming language.
+    </p>
+  </article>
+
+  <article>
+    <h2>Schedule</h2>
+    <section>
+      <h3>Participative Coding ("Sprints")</h3>
+      <p>
+        The first two days are dedicated to sprints.
+      </p>
+      <p>
+        Developers of various open source projects gather in little groups to
+        code together. Everyone is welcome to contribute, and we seek to guide
+        beginners.
+      </p>
+      <p>
+        Take part to the development of your favorite project! We provide the
+        space and environment (tables, chairs, internet connection.… and
+        coffee!).
+      </p>
+    </section>
+
+    <section>
+      <h3>Conferences and Workshops</h3>
+      <p>
+        During the two following days, you will have the opportunity to attend
+        to presentations on various subjects, about the Python programming
+        language, its use cases, good practices, feedbacks, shared ideas…
+      </p>
+    </section>
+  </article>
+
+  <article>
+    <h2>AFPy</h2>
+    <section>
+      <p>
+        We promote the Python programming language among the widest possible
+        audience.
+      </p>
+      <p>
+        We diffuse our knowledge and are open to external contributions.
+      </p>
+      <p>
+        Solidarity and democracy increase the potential of each one of us.
+      </p>
+    </section>
+  </article>
+
+  <article id="place">
+    <h2>The Place</h2>
+    <section>
+      <img src="{{ url_for('static', filename='images/partners/Université de Bordeaux.svg') }}"/>
+      <address>
+        Université de Bordeaux
+        Bâtiment A22
+        351 Cours de la Libération
+        33400 Talence
+      </address>
+      <a class="button" href="{{ url_for('page', name='venue', lang=lang) }}">
+        More Details
+      </a>
+    </section>
+  </article>
+
+  <article>
+    <h2>Our Sponsors</h2>
+    <section>
+      {{ sponsors(lang, only_logo=True) }}
+      <p>
+        The local team is available to answer your questions about the event
+        at <a href="mailto:contact@pycon.fr">contact@pycon.fr</a>.
+      </p>
+    </section>
+  </article>
+{% endblock content %}

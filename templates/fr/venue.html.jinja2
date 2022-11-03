@@ -1,0 +1,113 @@
+{% extends '_layout.jinja2' %}
+
+{% block content %}
+  <article>
+    <h2>Le lieu</h2>
+    <section>
+      <h3>Adresse</h3>
+      <p>
+        PyConFr 2023 est hébergée
+        par l’<a href="https://www.u-bordeaux.fr/">Université de Bordeaux</a>,
+        sur
+        le <a href="https://www.u-bordeaux.fr/Universite/Campus/Campus-Talence-Pessac-Gradignan">Campus
+        de Talence</a>.
+      </p>
+      <address>
+        Université de Bordeaux
+        Bâtiment A22
+        351 Cours de la Libération
+        33400 Talence
+      </address>
+      <p>
+        Coordonnées GPS : 44,8073 -0,5988
+      </p>
+      {{ map('Voir en plein écran') }}
+    </section>
+
+    <section>
+      <h3>Rejoindre le campus</h3>
+
+      <section>
+        <h4>En voiture</h4>
+        <p>
+          Par la rocade, sortie : <em>Talence-Domaine Universitaire</em>.
+          Prendre la direction de Bordeaux.
+
+          Si vous êtes au centre ville, il faut trouver la place de la Victoire.
+          À partir de là, le Domaine Universitaire de Talence est fléché.
+          Et une fois dans la bonne direction, c’est tout droit.
+        </p>
+        <p>Il est ensuite possible de se garer sur le parking de l’université.</p>
+      </section>
+
+      <section>
+        <h4>Depuis le centre (environ 30 minutes)</h4>
+        <p>
+          Vous pouvez rejoindre le campus par
+          le <a href="https://www.infotbm.com/info/line/tbt-60">tram B</a>,
+          arrêt Béthanie.
+        </p>
+      </section>
+
+      <section>
+        <h4>Depuis la gare (environ 25 minutes)</h4>
+        <ul>
+          <li>En tram : en sortant de la gare, il est possible de prendre le tram C jusqu’à l’arrêt Quinconces, puis le tram B jusqu’à l’arrêt Béthanie.</li>
+          <li>En bus et tram : Prendre le bus 9 direction <em>Brandenburg</em> jusqu’à l’arrêt <em>Barrière Saint-Genès</em>. Prendre le tram B direction Pessac jusqu’à l’arrêt Bethanie.</li>
+          <li>En bus : prendre le bus 10 direction <em>Beausoleil</em> jusqu’à l’arrêt Peixotto à proximité d’une entrée de l’université.</li>
+          <li>Si vous aimez marcher, vous pouvez également remonter le cours de la Marne (environ 1800 mètres) jusqu’à la place de la Victoire et prendre directement le tram B.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h4>Depuis l’aéroport (environ 1 heure ± 15 minutes)</h4>
+        <p>
+          Depuis l’aéroport de Bordeaux-Mérignac, plusieurs routes possibles en
+          fonction horaires avec un changement,
+        </p>
+        <ul>
+          <li>soit en
+            prenant le <a href="https://www.infotbm.com/info/line/tbc-01">Bus 1</a>
+            ou le <a href="https://www.infotbm.com/info/line/tbc-48">Bus 48</a>
+            puis le <a href="https://www.infotbm.com/info/line/tbt-60">tram B</a>,
+          </li><li>
+            soit avec le <a href="https://www.infotbm.com/info/line/tbc-01">Bus 1</a> puis le
+            <a href="https://www.infotbm.com/info/line/tbc-20">Bus 20</a> ou le
+            <a href="https://www.infotbm.com/info/line/tbc-34">Bus 34</a>.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h4>En vélo libre service</h4>
+        <p>
+          Vous pouvez également vous rendre sur le campus
+          en <a href="https://www.infotbm.com/fr/v3-comment-ca-marche.html">vélo
+          libre service (V3)</a>, à l’arrêt Arts et Metiers (n° 112).
+        </p>
+      </section>
+    </section>
+
+    <section>
+      <h3>Conseils pour le logement</h3>
+      <section>
+        <h4>Dans Bordeaux</h4>
+        <p>
+          Essayez d’être au plus proche de la
+          <a href="https://www.infotbm.com/info/line/tbt-60">ligne B du tram</a>,
+          ce qui vous donnera un accès direct à l’Université.
+        </p>
+      </section>
+      <section>
+        <h4>Sur le campus</h4>
+        <p>
+          Il y a quelques hôtels en proximité immédiate de l’Université.
+        </p>
+        <ul>
+          <li><a href="https://www.teneo.fr/">Ténéo Apparthotel Talence (70€-80€ la nuit)</a> — 10 minutes de marche</li>
+          <li><a href="https://sejours-affaires.com">Séjours & Affaires Bordeaux Yser (~60€ la nuit)</a> — 23 minutes de tram</li>
+        </ul>
+      </section>
+    </section>
+  </article>
+{% endblock content %}

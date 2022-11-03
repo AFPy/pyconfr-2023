@@ -1,0 +1,5 @@
+build
+.venv
+__pycache__
+*.css
+*.css.map

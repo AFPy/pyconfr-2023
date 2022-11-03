@@ -1,0 +1,102 @@
+{% extends '_layout.jinja2' %}
+
+{% block content %}
+  <article>
+    <h2>Programme</h2>
+
+    <section>
+      <h3>Conférences et ateliers</h3>
+      <p>
+        Samedi 18 et dimanche 19 février.
+      </p>
+      <p>
+        <em>
+          Le programme sera disponible début février. Si vous souhaitez
+          participer, <a href="https://cfp-2023.pycon.fr/cfp/">proposez votre sujet de
+          conférence ou d'atelier</a>.
+        </em>
+      </p>
+    </section>
+
+    <section>
+      <h3>Développement participatif (« sprints »)</h3>
+      <p>
+        Jeudi 16 et vendredi 17 février.
+      </p>
+      <p>
+        <em>
+          Le programme sera disponible début février. Si vous souhaitez
+          participer, <a href="https://cfp-2023.pycon.fr/cfp/">proposez votre sujet de
+          développement participatif</a>.
+        </em>
+      </p>
+    </section>
+
+    {#
+    <section>
+      <h3>Calendrier</h3>
+      <p>
+        Le calendrier sera disponible prochainement.
+      </p>
+      <p>
+        Le calendrier est disponible ci-dessous, sur une <a class="button"
+                                                            href="{{ url_for('schedule', lang=lang) }}">page en plein écran</a>,
+        ou <a class="button" href="{{ url_for('calendar') }}">dans
+        votre application de calendrier favorite</a>.
+      </p>
+      <p>
+        Vous pouvez également lire la description des
+        <a href="{{ url_for('talks', lang=lang, category='keynote') }}">plénières</a>, des
+        <a href="{{ url_for('talks', lang=lang, category='conference') }}">conférences</a>, des
+        <a href="{{ url_for('talks', lang=lang, category='workshop')}}">ateliers</a> et des
+        <a href="{{ url_for('talks', lang=lang, category='sprint') }}">sprints</a>.
+      </p>
+
+      <iframe src="{{ url_for('schedule', lang=lang) }}"></iframe>
+    </section>
+    #}
+
+    <section id="register">
+      <h3>Inscriptions</h3>
+      <p>
+        Les inscriptions ne sont pas encore ouvertes.
+      </p>
+      <p>
+        L’accès aux sprints, aux conférences et aux ateliers de PyConFr est
+        gratuit.
+      </p>
+      <p>
+        Cependant, <strong>l’inscription est obligatoire pour tous</strong>, y
+        compris membres du comité d’organisation, bénévoles, conférenciers et
+        sponsors.
+      </p>
+      <p>
+        Vous pouvez également soutenir <a href="https://afpy.org/">l’AFPy</a>,
+        qui organise chaque année cet événement,
+        en <a href="https://www.helloasso.com/associations/afpy/collectes/dons">faisant
+        un don</a>. Si vous souhaitez avoir une voix à son assemblée générale,
+        qui aura lieu le dimanche matin, vous
+        devez <a href="https://www.afpy.org/adhesions">devenir membre</a> avant
+        le 31 janvier.
+      </p>
+    </section>
+
+    <section id="dinner">
+      <h3>Repas du samedi soir</h3>
+      <p>
+        Un repas est organisé le samedi soir, de 19 h 30 à 23 h 00,
+        au <a href="https://www.bordeaux.fr/l11032/agora-du-haut-carre">Haut-Carré</a>,
+        uniquement pour les personnes ayant réservé lors de leur inscription.
+      </p>
+      <p>
+        Ce repas comprend
+        un cocktail dînatoire comprenant divers petits fours et des boissons avec et
+        sans alcool.
+      </p>
+      <p>
+        L’achat d’autres boissons alcoolisées (non comprises dans le prix) est possible
+        lors du repas.
+      </p>
+    </section>
+  </article>
+{% endblock content %}
