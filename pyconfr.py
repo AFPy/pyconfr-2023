@@ -9,12 +9,12 @@ from icalendar import Calendar
 from markdown2 import Markdown
 from sassutils.wsgi import SassMiddleware
 
-app = Flask(__name__, static_url_path='/2023/static')
+app = Flask(__name__, static_url_path='/static')
 app.wsgi_app = SassMiddleware(app.wsgi_app, {
     'pyconfr': {
         'sass_path': 'static/sass',
         'css_path': 'static/css',
-        'wsgi_path': '/2023/static/css',
+        'wsgi_path': 'static/css',
         'strip_extension': True}})
 
 
@@ -24,15 +24,14 @@ def slug(string):
 
 
 @app.route('/')
-@app.route('/2023/')
-@app.route('/2023/<lang>/<name>.html')
+@app.route('/<lang>/<name>.html')
 def page(name='index', lang='fr'):
     return render_template(
         '{lang}/{name}.html.jinja2'.format(name=name, lang=lang),
         page_name=name, lang=lang)
 
 
-# @app.route('/2023/<lang>/talks/<category>.html')
+# @app.route('/<lang>/talks/<category>.html')
 # def talks(lang, category):
 #     talks = []
 #     with urlopen('https://cfp-2023.pycon.fr/schedule/xml/') as fd:
@@ -54,7 +53,7 @@ def page(name='index', lang='fr'):
 #         category=category, talks=talks, lang=lang)
 
 
-# @app.route('/2023/<lang>/full-schedule.html')
+# @app.route('/<lang>/full-schedule.html')
 # def schedule(lang):
 #     with urlopen('https://cfp-2023.pycon.fr/schedule/html/') as fd:
 #         html = fd.read().decode('utf-8')
@@ -100,7 +99,7 @@ def page(name='index', lang='fr'):
 #     return render_template('schedule.html.jinja2', data=soup)
 
 
-# @app.route('/2023/pyconfr-2023.ics')
+# @app.route('/pyconfr-2023.ics')
 # def calendar():
 #     with urlopen('https://cfp-2023.pycon.fr/schedule/ics/') as fd:
 #         calendar = Calendar.from_ical(fd.read())
