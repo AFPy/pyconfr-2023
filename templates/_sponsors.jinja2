@@ -19,6 +19,29 @@
         l'évènement PyConFR 2023, avec la volonté de mettre le monde académique
         en lien avec les acteurs de la communauté Python.
       </p>
+    {% elif company == 'Entr\'ouvert' %}
+      <p>
+        Entr'ouvert est une société coopérative attachée à la démocratie
+        d'entreprise.  Les salariés possèdent l'entreprise à parts égales, les
+        décisions sont prises selon le principe « une personne = une
+        voix ». Nous privilégions un fonctionnement organique, proche de celui
+        qu'on retrouve dans les communautés du Logiciel Libre. Il s'agit d'un
+        mode d'organisation confortable pour nous mais surtout efficace pour
+        produire du logiciel libre.
+      </p>
+      <p>
+        Entr'ouvert a une forte connaissance du Logiciel Libre, de ses
+        communautés, ses principes, ses habitudes. Préserver et promouvoir
+        l'écosystème du Logiciel Libre fait partie des objectifs de la
+        structure.
+      </p>
+      <p>
+        Entr'ouvert est éditeur d'une solution libre (GNU GPL) de Gestion de la
+        Relation Usager, nommée Publik. Elle est utilisée par de très
+        nombreuses villes et agglomérations, en France et en Belgique. Cette
+        solution est développée en Python, sur le cadriciel Django ; outils
+        quasi exclusifs dès qu'il faut développer quelque chose à Entr'ouvert.
+      </p>
     {% endif %}
 
   {% elif lang == 'en' %}
@@ -39,6 +62,29 @@
         of bringing the academic world into contact with the players in the
         python community.
       </p>
+      
+    {% elif company == 'Entr\'ouvert' %}
+      <p>
+        Entr'ouvert is a cooperative company attached to the principle of
+        company democracy. Employees own the company in equal shares, decisions
+        are taken based on the "1 vote per employee" principle. We privilege an
+        organic operating mode, close to the one we find in a number of free
+        software communities. This is an operating mode that is comfortable to
+        us and overall efficient to produce free software.
+      </p>
+      <p>
+        Entr'ouvert has a thorough knowledge of free software communities and
+        their operating mode. Preserving and promoting the free software
+        ecosystem is part of the structure purposes.
+      </p>
+      <p>
+        Entr'ouvert is the publisher of a free (GNU GPL) Citizen-state
+        Relationship Management, named Publik. It is used by many cities, in
+        France and Belgium.  This solution is developed in Python, with the
+        Django framework. At Entr'ouvert, Python and Django are the preferred
+        tools when something needs to be written, be it a big software or a
+        little script.
+      </p>
     {% endif %}
 
   {% endif %}
@@ -55,6 +101,7 @@
       },
 
       'Argent' if lang == 'fr' else 'Silver': {
+      'Entr\'ouvert': 'http://www.entrouvert.com/',
       },
 
       'Bronze': {
