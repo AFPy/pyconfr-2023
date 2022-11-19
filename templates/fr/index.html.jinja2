@@ -3,8 +3,10 @@
 {% block content %}
   <article>
     <h2>PyConFR 2023 Bordeaux</h2>
-    <a class="button" href="{{ url_for('page', name='schedule', lang=lang) }}">Voir le programme</a>
-    <a class="button" href="{{ url_for('page', name='schedule', lang=lang, _anchor='register') }}">Inscription obligatoire</a>
+    <li>
+      <a class="button" href="{{ url_for('page', name='schedule', lang=lang) }}">Voir le programme</a>
+      <a class="button" href="{{ url_for('page', name='schedule', lang=lang, _anchor='register') }}">Inscription obligatoire</a>
+    </li>
     <p>
       16 – 19 février 2023
     </p>
