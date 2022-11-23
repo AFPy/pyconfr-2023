@@ -42,6 +42,24 @@
         solution est développée en Python, sur le cadriciel Django ; outils
         quasi exclusifs dès qu'il faut développer quelque chose à Entr'ouvert.
       </p>
+
+    {% elif company == 'Alkivi' %}
+      <p>
+        Nous proposons aux TPE et PME d'externaliser leurs besoins en S.I.
+      </p>
+      <p>
+        Nos activités coeur de métiers sont :
+        <ul>
+          <li>la gestion de réseaux (Firewall, Routeur, VPN, Switch, Wifi) et connexions Internet (Fibre, xDSL, 4G)</li>
+          <li>la gestion de la téléphonie (IPBX , 3CX, téléphonie hébergée)</li>
+          <li>la gestion de votre parc informatique (Prise en main à distance)</li>
+          <li>L'hébergement et la gestion de vos serveurs et données : Nous sommes partenaires agréés d'OVH</li>
+        </ul>
+      </p>
+      <p>
+       Tous ces services sont disponibles via un point de contact unique au sein d'Alkivi qui gère entièrement votre environnement numérique.<br/>
+       Une chose nous tient à coeur : Tout ce que nous codons est Open Source (et principalement en Python) <a href="https://github.com/alkivi-sas"/>https://github.com/alkivi-sas/</a>
+      </p>
     {% endif %}
 
   {% elif lang == 'en' %}
@@ -85,6 +103,17 @@
         tools when something needs to be written, be it a big software or a
         little script.
       </p>
+
+    {% elif company == 'Alkivi' %}
+      <p>
+        Manage from A to Z your entire IT system : internet, phones, computers,
+        IT help desk, security and backup.You can be focused on your job,
+        we take care of IT problems, it's our job.
+        With us, you have a single point of contact for your IT environment.
+      </p>
+      <p>
+        All we code is Opensource : <a href="https://github.com/alkivi-sas/">https://github.com/alkivi-sas/</a> (and mainly in Python)
+      </p>
     {% endif %}
 
   {% endif %}
@@ -105,6 +134,7 @@
       },
 
       'Bronze': {
+      'Alkivi': 'https://github.com/alkivi-sas/',
       },
 
       'Cœur' if lang == 'fr' else 'Heart': {
