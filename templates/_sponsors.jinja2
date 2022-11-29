@@ -57,8 +57,23 @@
         </ul>
       </p>
       <p>
-       Tous ces services sont disponibles via un point de contact unique au sein d'Alkivi qui gère entièrement votre environnement numérique.<br/>
-       Une chose nous tient à coeur : Tout ce que nous codons est Open Source (et principalement en Python) <a href="https://github.com/alkivi-sas"/>https://github.com/alkivi-sas/</a>
+       Tous ces services sont disponibles via un point de contact unique au
+       sein d'Alkivi qui gère entièrement votre environnement numérique.<br/>
+       Une chose nous tient à coeur : Tout ce que nous codons est Open Source
+       (et principalement en Python)
+       <a href="https://github.com/alkivi-sas"/>https://github.com/alkivi-sas/</a>
+      </p>
+    {% elif company == 'MyBeezBox' %}
+      <p>
+      Depuis 6 ans, MyBeezBox accompagne les acteurs de la gastronomie, du
+      tourisme et des loisirs avec une ambition : les aider à diversifier leurs
+      activités et à générer des revenus complémentaires grâce à des outils
+      simples et performants. Les professionnels bénéficient d'une boutique
+      personnalisée avec le paiement en ligne intégré et créent de nouvelles
+      offres en quelques clics : bons et chèques cadeaux, menus à emporter,
+      ateliers, produits, tickets, expériences...<br/>
+      Pour accomplir cela : une équipe internationale de 20 personnes et plus
+      de 500 000 lignes de codes en Django et Elm.
       </p>
     {% endif %}
 
@@ -112,7 +127,20 @@
         With us, you have a single point of contact for your IT environment.
       </p>
       <p>
-        All we code is Opensource : <a href="https://github.com/alkivi-sas/">https://github.com/alkivi-sas/</a> (and mainly in Python)
+        All we code is Opensource :
+        <a href="https://github.com/alkivi-sas/">https://github.com/alkivi-sas/</a> (and mainly in Python)
+      </p>
+    {% elif company == 'MyBeezBox' %}
+      <p>
+        For the past 6 years, MyBeezBox has been supporting members of the
+        gastronomy, tourism and leisure industries with one ambition: to help
+        them diversify their activities and generate additional income thanks to
+        simple and effective tools. Professionals benefit from a personalized
+        shop with integrated online payment and create new offers in a few
+        clicks: vouchers and giftcards, takeaway menus, workshops, products,
+        tickets, experiences...<br/>
+        To accomplish this: an international team of 20 people and over 500,000
+        lines of code in Django and Elm.
       </p>
     {% endif %}
 
@@ -135,6 +163,7 @@
 
       'Bronze': {
       'Alkivi': 'https://github.com/alkivi-sas/',
+      'MyBeezBox': 'https://www.mybeezbox.com/',
       },
 
       'Cœur' if lang == 'fr' else 'Heart': {
