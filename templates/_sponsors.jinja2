@@ -93,6 +93,22 @@
         <li>UI, UX webdesign</li>
         <li>Hébergement / Cloud / Kubernetes / Docker</li>
       </ul>
+    {% elif company == "Taipy" %}
+      <p><b>Taipy, un nouveau package Python low-code très puissant.</b></p>
+      <p><b>Taipy</b> permet de créer des <b>applications Data Science complètes au
+      niveau graphique et pour la gestion de scénarios</b>, de modèles, de pipelines
+      et de Data Nodes.</p>
+      <p>
+	Il est composé de deux composants indépendants mais complémentaires :
+	<ul>
+	  <li><b>Taipy Core</b> pour créer des <b>scénarios</b>, utiliser des modèles, récupérer des métriques facilement. <b>Taipy-Core</b> permet de <b>modéliser les flux de données et les scénarios utilisateur</b>. Il offre une réelle <b>puissance et une simplicité d’utilisation.</b></li>
+	  <li><b>Taipy GUI</b> pour créer une <b>interface utilisateur interactive et performante</b> en quelques lignes.</li>
+	</ul>
+      </p>
+      <p>
+	Ces deux composants permettent de construire une <b>application d'IA très interactive et complète</b> au profit de l'utilisateur final qui peut alors explorer des données, lancer des prédictions/pipelines depuis l'application. <b>Taipy est au coeur de l’applicatif.</b></p>
+      <p>Taipy a été créé pour le développement de pilotes mais surtout pour de vraies applications utilisateurs.</p>
+
     {% endif %}
 
   {% elif lang == 'en' %}
@@ -178,6 +194,28 @@
         <li>UI, UX webdesign</li>
         <li>Hosting / Cloud / Kubernetes / Docker</li>
       </ul>
+    {% elif company == "Taipy" %}
+    <p><b>Taipy, The next-gen open-source Python application builder.</b></p>
+
+    <p>Taipy meets the challenge of rapidly transforming a bare algorithm into a full-fledged Decision Support System for end-users!
+    <b>We provide the next generation of Open-Source Software</b> (With <b>Taipy GUI and Taipy Core</b>) that enables Python Developers to quickly build <b>interactive end-user applications.</b></p>
+
+    <p>Taipy is composed of:
+    <ul>
+    <li><b>Taipy GUI</b> for the development of highly interactive GUIs ready for production</li>
+    <li><b>Taipy Core</b> provides facilities for smart pipeline management, data caching as well as scenario and cycle management</li>
+    </ul>
+    </p>
+    <p>Taipy is designed by AI veterans, it covers the needs of a wide range of algorithms from:
+    <ul>
+    <li>AI models</li>
+    <li>Decision Optimization</li>
+    <li>Simulation</li>
+    <li>Ad-Hoc Heuristics,</li>
+    <li>Data Presentation, Transformations (ETLs, etc)</li>
+    <li>Etc.</li>
+    </ul>
+    </p>
     {% endif %}
 
   {% endif %}
@@ -191,6 +229,7 @@
       },
 
       'Or' if lang == 'fr' else 'Gold': {
+          'Taipy': 'https://taipy.io/',
       },
 
       'Argent' if lang == 'fr' else 'Silver': {
