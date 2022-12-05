@@ -1,23 +1,21 @@
 {% extends '_layout.jinja2' %}
 
 {% block content %}
-  <article>
-    <h2>PyConFR 2023 Bordeaux</h2>
-    <li>
-      <a class="button" href="{{ url_for('page', name='schedule', lang=lang) }}">Voir le programme</a>
+  <section class="coverboard">
+    <div class="cover">
+      <img src="/2023/static/images/banniere.png" width="1920" height="753" alt="" />
+    </div>
+    <div class="program-button">
+      <a class="button" href="{{ url_for('page', name='schedule', lang=lang) }}">Programme</a>
       <a class="button" href="{{ url_for('page', name='schedule', lang=lang, _anchor='register') }}">Inscription obligatoire</a>
-    </li>
-    <p>
-      16 – 19 février 2023
-    </p>
-    <p>
-      Organisée par <a href="https://afpy.org">l'AFPy</a>, cette conférence est
-      gratuite, entièrement gérée par des bénévoles et dédiée au regroupement des
-      personnes intéressées par le langage de
-      programmation <a href="https://python.org">Python</a>.
-    </p>
-  </article>
+    </div>
+  </section>
 
+  <article class="pycon-presentation">
+    <h1>Bienvenue à la PyConFR 2023 !</h1>
+    <p class="pycon-date">Du 16 au 19 février 2023 à Bordeaux</p>
+    <p>Organisée par <a href="https://afpy.org">l'AFPy</a>, cette conférence est gratuite, entièrement gérée par des bénévoles et dédiée au regroupement des personnes intéressées par le langage de programmation <a href="https://python.org">Python</a>.</p>
+  </article>
   <article>
     <h2>Programme</h2>
     <section>

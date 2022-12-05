@@ -1,23 +1,23 @@
 {% extends '_layout.jinja2' %}
 
 {% block content %}
-  <article>
-    <h2>PyConFR 2023 Bordeaux</h2>
-    <li>
-      <a class="button" href="{{ url_for('page', name='schedule', lang=lang) }}">See Schedule</a>
+  <section class="coverboard">
+    <div class="cover">
+      <img src="/2023/static/images/banniere.png" width="1920" height="753" alt="" />
+    </div>
+    <div class="program-button">
+      <a class="button" href="{{ url_for('page', name='schedule', lang=lang) }}">Schedule</a>
       <a class="button" href="{{ url_for('page', name='schedule', lang=lang, _anchor='register') }}">Mandatory registration</a>
-    </li>
+    </div>
+  </section>
+
+  <article class="pycon-presentation">
+    <h1>Presenting PyConFR 2023!</h1>
+    <p class="pycon-date">February 16<sup>th</sup> – 19<sup>th</sup> 2023 at Bordeaux</p>
     <p>
-      February 16<sup>th</sup> – 19<sup>th</sup> 2023
-    </p>
-    <p>
-      Organized by <a href="https://afpy.org">AFPy</a>, this conference is
-      free, entirely coordinated by volunteers and dedicated to bringing
-      together people interested by the <a href="https://python.org">Python</a>
-      programming language.
+      Organized by <a href="https://afpy.org">AFPy</a>, this conference is free, entirely coordinated by volunteers and dedicated to bringing together people interested by the <a href="https://python.org">Python</a> programming language.
     </p>
   </article>
-
   <article>
     <h2>Schedule</h2>
     <section>
