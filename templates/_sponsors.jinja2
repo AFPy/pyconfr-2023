@@ -108,7 +108,14 @@
       <p>
 	Ces deux composants permettent de construire une <b>application d'IA très interactive et complète</b> au profit de l'utilisateur final qui peut alors explorer des données, lancer des prédictions/pipelines depuis l'application. <b>Taipy est au coeur de l’applicatif.</b></p>
       <p>Taipy a été créé pour le développement de pilotes mais surtout pour de vraies applications utilisateurs.</p>
-
+      
+    {% elif company == "Yaal Coop" %}
+    <p>
+    Yaal Coop est une société coopérative d'intérêt collectif (SCIC)
+spécialisée dans le conseil, le développement et l'hébergement de services informatiques.
+La coopérative est située à Bordeaux et est composée de 5 associé·e·s salarié·e·s.
+Python est le langage de prédilection utilisé pour le développement de service web, scripts, logiciels libres et la plupart des projets de la coopérative.
+</p>
     {% endif %}
 
   {% elif lang == 'en' %}
@@ -216,6 +223,12 @@
     <li>Etc.</li>
     </ul>
     </p>
+    {% elif company == "Yaal Coop" %}
+    <p>
+      Yaal Coop is a cooperative specialized in consulting, development and services hosting.
+      The company is located in Bordeaux and has 5 salaried partners.
+      Python is our favorite language to write web services, scripts, free software and almost every cooperative projects.
+    </p>
     {% endif %}
 
   {% endif %}
@@ -240,6 +253,7 @@
       'Alkivi': 'https://github.com/alkivi-sas/',
       'MyBeezBox': 'https://www.mybeezbox.com/',
       'Emencia': 'https://www.emencia.com/',
+      'Yaal Coop': 'https://yaal.coop/',
       },
 
       'Cœur' if lang == 'fr' else 'Heart': {
