@@ -1,6 +1,6 @@
 // Colors
 $background: #ffffff
-$text: #000000
+$text: #3C3C3C
 $primary: #378899
 $secondary: #f6b36a
 $third: #fe6f61
@@ -8,14 +8,22 @@ $third: #fe6f61
 
 // Fonts
 @font-face
-  font-family: Fira Sans
-  font-weight: normal
-  src: url(/2023/static/fonts/FiraSans-Regular.otf)
+  font-family: Manrope
+  font-weight: 100 400
+  font-style: normal
+  src: url(/2023/static/fonts/manrope/Manrope-Regular.otf)
 
 @font-face
-  font-family: Fira Sans
-  font-weight: bold
-  src: url(/2023/static/fonts/FiraSans-Bold.otf)
+  font-family: Manrope
+  font-weight: 500 700
+  font-style: normal
+  src: url(/2023/static/fonts/manrope/Manrope-Medium.otf)
+
+@font-face
+  font-family: Manrope
+  font-weight: 800 900
+  font-style: normal
+  src: url(/2023/static/fonts/manrope/Manrope-ExtraBold.otf)
 
 
 // Common
@@ -25,8 +33,10 @@ $third: #fe6f61
 
 html
   color: $text
-  font-family: Fira Sans
+  font-family: Manrope
   font-size: 1.2em
+  font-weight: 400
+  letter-spacing: .05em
 
 body
   display: flex
@@ -34,24 +44,23 @@ body
   margin: 0
   min-height: 100vh
 
-h1
-  display: none
-
-h2, h3, h4
+h1, h2, h3, h4
   font-weight: normal
-  letter-spacing: .1em
   margin: 2em 0 1em
 
-h2
-  text-transform: uppercase
+h1
+  font-size: 2em
+  font-weight: 900
+  color: $primary
+  margin-bottom: 0
 
-  &::after
-    background: $third
-    content: ''
-    display: block
-    height: 0.2em
-    margin: 0.2em 0
-    width: 2em
+h2
+  font-weight: 700
+  text-transform: uppercase
+  color: $primary
+
+h3
+  font-weight: 700
 
 a
   color: $primary
@@ -72,11 +81,12 @@ ul li::marker
 .button
   background-color: $primary
   color: white
-  display: block
+  display: inline-block
   margin: 1rem 0
-  padding: 1rem
+  padding: 0.5rem 1rem
   max-width: max-content
   transition: background-color 0.5s
+  border-radius: 12px
 
   &:hover, &:focus
     background-color: lighten($primary, 15%)
@@ -84,7 +94,7 @@ ul li::marker
 
 
 aside, nav, footer
-  background: $text
+  background: $background
   color: $background
 
   ul
@@ -92,23 +102,43 @@ aside, nav, footer
     flex-wrap: wrap
     margin: 0
     padding: 0
+    justify-content: center
 
     li
       display: block
 
       a
-        color: inherit
+        color: $primary
         display: inline-block
-        padding: 0.5em 1em
+        padding: 1em
         text-decoration: inherit
+        font-size: 0.8em
+        font-weight: normal
+        position: relative
 
         &:hover, &:focus
-          background: lighten($primary, 15%)
-          text-decoration: inherit 
+          text-decoration: inherit
 
-      &.active a
+      &.active:after
+        content: ''
+        display: block
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 2px
         background: $primary
 
+      &:hover:after, &:focus:after
+        content: ''
+        display: block
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 2px
+        background: $primary
+
+nav
+  border-bottom: 1px solid #37889947
 
 aside
   align-self: flex-end
@@ -120,6 +150,12 @@ aside
     opacity: 0.4
     padding-right: 0.5rem
     padding-top: 0.5rem
+
+    &:after
+      display: none !important
+
+    a:after
+      display: none !important
 
     a::before
       background: center / cover
@@ -160,8 +196,8 @@ main
     overflow: auto
     padding-bottom: 3em
 
-    &:not(:first-of-type)
-      border-top: 1px solid $secondary
+    &:nth-child(even)
+      background: #F9F9F9
 
     section
       margin-top: 4em
@@ -218,7 +254,7 @@ main
     > a
       display: block
       text-align: center
-      
+
     .description
       padding: 1.5rem
       border-right: 5px solid $secondary
@@ -226,6 +262,45 @@ main
 
 
 #index
+  .coverboard
+    position: relative;
+
+    .cover
+      position: relative
+      width: 100%
+      padding-top: 39.21875%
+
+      img
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+
+    .program-button
+      position: absolute
+      z-index: 2
+      width: 100%
+      top: 58%
+      text-align: center
+
+      a
+        margin: 0 auto
+
+  .pycon-presentation
+    text-align: center
+
+  .pycon-date
+    margin-top: 0
+    font-weight: 800
+    color: $third
+
+  article
+    &:nth-child(odd)
+      background: #F9F9F9
+    &:nth-child(even)
+      background: $background
+
   article:first-child
     font-size: 1.25em
     text-align: center
@@ -235,7 +310,7 @@ main
       border-top: none
 
     &::before
-      background: url(/2023/static/images/banniere.png) center / cover
+      background: url(/2023/static/images/banniere.png) top center no-repeat
       content: ''
       display: block
       height: 100vh
@@ -271,7 +346,7 @@ main
       &:first-of-type
         color: $primary
         font-size: 1.5em
-        font-weight: bold
+        font-weight: normal
         line-height: 20vh
         margin-top: 75vh
 
@@ -283,7 +358,23 @@ main
     max-width: 15em
 
 
-@media (max-width: 800px)
+@media (max-width: 980px)
+  #index .coverboard
+    .cover
+      width: 200%
+      padding-top: calc(2 * 39.21875%
+
+      img
+        left: -50%
+        transform: translate(25%, 0)
+
+    .program-button
+      position: absolute
+      z-index: 2
+      width: 100%
+      top: 58%
+
+@media (max-width: 900px)
   html
     font-size: 1em
 
