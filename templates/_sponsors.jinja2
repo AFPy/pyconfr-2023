@@ -116,6 +116,14 @@ spécialisée dans le conseil, le développement et l'hébergement de services i
 La coopérative est située à Bordeaux et est composée de 5 associé·e·s salarié·e·s.
 Python est le langage de prédilection utilisé pour le développement de service web, scripts, logiciels libres et la plupart des projets de la coopérative.
 </p>
+    {% elif company == "Mergify" %}
+    <p>
+    Mergify est un outil d'automatisation destiné aux équipes
+    collaborant sur GitHub. Il permet aux ingénieurs
+    d'améliorer leur processus de fusion de code en définissant et en
+    automatisant ces processus via des merges automatiques et des
+    files de merge.
+    </p>
     {% endif %}
 
   {% elif lang == 'en' %}
@@ -229,6 +237,14 @@ Python est le langage de prédilection utilisé pour le développement de servic
       The company is located in Bordeaux and has 5 salaried partners.
       Python is our favorite language to write web services, scripts, free software and almost every cooperative projects.
     </p>
+    {% elif company == "Mergify" %}
+    <p>
+      Mergify is an automation tool for software engineering teams
+      who use GitHub to collaborate. It allows engineers to improve
+      their code-merging processes by defining and automating
+      workflows using features like automatic merges and merge
+      queues.
+    </p>
     {% endif %}
 
   {% endif %}
@@ -254,6 +270,7 @@ Python est le langage de prédilection utilisé pour le développement de servic
       'MyBeezBox': 'https://www.mybeezbox.com/',
       'Emencia': 'https://www.emencia.com/',
       'Yaal Coop': 'https://yaal.coop/',
+      'Mergify': 'https://mergify.com/',
       },
 
       'Cœur' if lang == 'fr' else 'Heart': {
