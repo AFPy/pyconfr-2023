@@ -108,7 +108,7 @@
       <p>
 	Ces deux composants permettent de construire une <b>application d'IA très interactive et complète</b> au profit de l'utilisateur final qui peut alors explorer des données, lancer des prédictions/pipelines depuis l'application. <b>Taipy est au coeur de l’applicatif.</b></p>
       <p>Taipy a été créé pour le développement de pilotes mais surtout pour de vraies applications utilisateurs.</p>
-      
+
     {% elif company == "Yaal Coop" %}
     <p>
     Yaal Coop est une société coopérative d'intérêt collectif (SCIC)
@@ -128,6 +128,26 @@ Python est le langage de prédilection utilisé pour le développement de servic
     <p>Camptocamp est une société de services active en Suisse en France et en Allemagne fondée en 2001. Nous proposons des solutions Open Source innovantes pour la mise en œuvre de systèmes d'information géographique (SIG), de logiciels de gestion intégrés pour les PME (ERP Odoo) et de gestion des infrastructures informatiques.
 </p><p>
 Nos services comprennent du conseil, de l'implémentation, de la formation et de la maintenance. En outre, nous mettons à votre disposition notre expertise pour l'achat et le renouvellement de vos abonnements de diverses solutions d'entreprise comme le portefeuille Red Hat ou Suse.</p>
+    {% elif company == "Makina Corpus" %}
+    <p>Société de services en ingénierie logicielle, Makina Corpus conçoit
+    et développe des applications web et mobiles innovantes, en
+    s’appuyant exclusivement sur des logiciels libres. La société s'est
+    spécialisée dans le développement d'applications métiers, les
+    portails complexes, le traitement d'informations spatiales et la
+    cartographie interactive.</p>
+
+    <p>Elle propose des prestations globales couvrant tous les aspects
+    techniques de projets logiciels : conception, développement,
+    maintenance, audits, formations mais aussi création graphique, et met
+    l’accent sur l’ergonomie afin d’offrir des solutions puissantes qui
+    restent utilisables aisément.</p>
+
+    <p>Positionnée sur l’open Source et l’innovation, Makina Corpus place le
+    langage Python au cœur de sa stratégie technique depuis ses
+    débuts. Nos experts Python utilisent ce langage pour développer, en
+    l’associant à d’autres technologies, diverses applications web :
+    métiers, cartographiques, outils d'IA et de Data Science, etc.
+    </p>
     {% endif %}
 
   {% elif lang == 'en' %}
@@ -251,8 +271,25 @@ Nos services comprennent du conseil, de l'implémentation, de la formation e
     </p>
     {% elif company == "Camptocamp" %}
     <p>Camptocamp is a Swiss service company founded in 2001 in the field of Open Source software with great expertise in the areas of Enterprise Resource Planning software (ERP), IT Management Systems and Geographic Information Systems (GIS). Our services include consulting, implementation, training, maintenance, support and R&D. In addition, Camptocamp has sophisticated competencies in consulting and sales of subscriptions for enterprise solutions in the Open Source environment, such as the Red Hat or Suse portfolio.</p>
-    {% endif %}
+    {% elif company == "Makina Corpus" %}
 
+    <p>Makina Corpus is a software engineering services company which
+    designs, develops and integrates innovative web and mobile
+    applications, relying exclusively on open source software.</p>
+
+    <p>It is specialized in developing business applications, complex portals
+    and dynamic mapping.</p>
+
+    <p>Makina Corpus places Python at the heart of its technical strategy
+    since its beginnings and recruits among the best talents of the
+    sector. Its experts get involved in the Python community in a
+    pro-active way through their participation in events and their Open
+    Source contributions.</p>
+
+    <p>Job offers, achievements and blog articles, you can read our news on
+    makina-corpus.com.</p>
+
+    {% endif %}
   {% endif %}
   </div>
 {% endmacro %}
@@ -269,6 +306,7 @@ Nos services comprennent du conseil, de l'implémentation, de la formation e
 
       'Argent' if lang == 'fr' else 'Silver': {
       'Entr\'ouvert': 'https://www.entrouvert.com/',
+      'Makina Corpus': 'https://makina-corpus.com/',
       },
 
       'Bronze': {
