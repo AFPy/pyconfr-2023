@@ -8,8 +8,9 @@
   <h2>{{ titles[category] }}</h2>
 
   {% for talk in talks %}
-    <article id="{{ talk.title|slug }}">
-      <h3><a href="#{{ talk.title|slug }}">{{ talk.title }}</a></h3>
+    {% set talk_title_slug = talk.title | slug %}
+    <article id="{{ talk_title_slug }}">
+      <h3><a href="#{{ talk_title_slug }}">{{ talk.title }}</a></h3>
       <p>
         By {{ talk.person }}
         {% if category == 'sprint' %}
