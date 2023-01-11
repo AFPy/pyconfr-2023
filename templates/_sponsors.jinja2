@@ -19,6 +19,11 @@
         l'évènement PyConFR 2023, avec la volonté de mettre le monde académique
         en lien avec les acteurs de la communauté Python.
       </p>
+    {% elif company == 'Python Software Foundation' %}
+      <p>
+        Python Software Foundation est une organisation dédiée à la promotion
+        des technologies open source liées au langage de programmation Python.
+      </p>
     {% elif company == 'Entr\'ouvert' %}
       <p>
         Entr'ouvert est une société coopérative attachée à la démocratie
@@ -174,7 +179,11 @@ Nos services comprennent du conseil, de l'implémentation, de la formation e
         of bringing the academic world into contact with the players in the
         python community.
       </p>
-
+    {% elif company == 'Python Software Foundation' %}
+      <p>
+        The Python Software Foundation is an organization devoted to advancing
+        open source technology related to the Python programming language.
+      </p>
     {% elif company == 'Entr\'ouvert' %}
       <p>
         Entr'ouvert is a cooperative company attached to the principle of
@@ -304,6 +313,7 @@ Nos services comprennent du conseil, de l'implémentation, de la formation e
   {% set levels = {
       'Platine' if lang == 'fr' else 'Platinum': {
           'Université de Bordeaux': 'https://www.u-bordeaux.fr/Universite',
+          'Python Software Foundation': 'https://www.python.org/psf-landing/',
       },
 
       'Or' if lang == 'fr' else 'Gold': {
