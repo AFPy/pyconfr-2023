@@ -159,6 +159,8 @@ Nos services comprennent du conseil, de l'implémentation, de la formation e
     Découvrez nos offres d’emploi, nos réalisations et nos articles :
     <a href=https://makina-corpus.com>makina-corpus.com</a>
     </p>
+    {% elif company == "CGWire" %}
+    <p>CGWire facilite la collaboration des intervenants de films d'animation à travers Kitsu, une solution de gestion de production libre et open source. C'est une application web de gestion de projets adaptée au suivi d'un film animé. Elle permet aux équipes de communiquer facilement et de valider les livrables depuis n'importe où.</p>
     {% endif %}
 
   {% elif lang == 'en' %}
@@ -304,6 +306,8 @@ Nos services comprennent du conseil, de l'implémentation, de la formation e
     <p>Job offers, achievements and blog articles, you can read our news on
     makina-corpus.com.</p>
 
+    {% elif company == "CGWire" %}
+    <p>CGWire facilitates collaboration between all stakeholders of an animation movie production. We propose Kitsu, a free and open-source production manager. It's a project management web application adapted to animation movie tracking. It allows teams to communicate easily and review deliveries from anywhere.</p>
     {% endif %}
   {% endif %}
   </div>
@@ -323,6 +327,7 @@ Nos services comprennent du conseil, de l'implémentation, de la formation e
       'Argent' if lang == 'fr' else 'Silver': {
       'Entr\'ouvert': 'https://www.entrouvert.com/',
       'Makina Corpus': 'https://makina-corpus.com/',
+      'CGWire': 'https://www.cg-wire.com/',
       },
 
       'Bronze': {
