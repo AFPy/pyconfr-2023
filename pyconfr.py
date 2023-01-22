@@ -1,4 +1,3 @@
-from urllib.parse import quote
 from urllib.request import urlopen
 from xml.etree import ElementTree
 
@@ -8,6 +7,7 @@ from flask_frozen import Freezer
 from icalendar import Calendar
 from markdown2 import Markdown
 from sassutils.wsgi import SassMiddleware
+from slugify import slugify
 
 app = Flask(__name__, static_url_path='/2023/static')
 app.wsgi_app = SassMiddleware(app.wsgi_app, {
@@ -20,7 +20,7 @@ app.wsgi_app = SassMiddleware(app.wsgi_app, {
 
 @app.template_filter()
 def slug(string):
-    return quote(str(string).lower(), safe='')
+    return slugify(string, max_length=30)
 
 
 @app.route('/')
