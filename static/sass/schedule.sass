@@ -1,29 +1,28 @@
+// Fonts
 @font-face
-  font-family: dosis
-  font-weight: normal
-  src: url(/2019/static/fonts/Dosis-Regular.otf)
+  font-family: Manrope
+  font-weight: 100 400
+  font-style: normal
+  src: url(/2023/static/fonts/manrope/Manrope-Regular.otf)
 
 html
-  font-family: dosis
+  font-family: Manrope
   padding: 0
 
 body
   margin: 0
   padding: 0
 
-  column
-
 table
   border-spacing: 1px
+  font-size: 10pt
+  line-height: 1.3
 
   em
     display: inline-block
     font-size: 0.8em
     font-style: normal
-    padding: 0.5em 0
-
-tr td
-  border-bottom: 1px solid #eee
+    margin-top: 0.5em
 
 tr:first-child
   position: -webkit-sticky
@@ -33,15 +32,15 @@ tr:first-child
   td
     background: white
 
+    &:last-of-type
+      display: none
+
 tr:nth-child(2), tr:nth-child(3)
   display: none
 
 td
-  padding: 0.25em
+  padding: 1.5em 0.5em
   text-align: center
-
-  &[colspan="9"]
-    padding: 1.5em 0 0.5em 0
 
 td:first-child
   background: white
@@ -54,10 +53,3 @@ a
 
 td:not(:hover) a
   text-decoration: inherit
-
-.label
-  border-radius: 0.2em
-  display: inline-block
-  font-size: 0.8em
-  margin: 0.2em
-  padding: 0.2em

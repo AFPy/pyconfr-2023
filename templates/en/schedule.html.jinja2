@@ -2,56 +2,18 @@
 
 {% block content %}
   <article>
-    <h2>Schedule</h2>
-
-    <section>
-      <h3>Conferences and Workshops</h3>
-      <p>
-        Saturday, February 18<sup>th</sup> and Sunday, February 19<sup>th</sup>.
-      </p>
-      <p>
-        <em>
-          Schedule will be available in early February. If you want to participate, please
-          <a href="https://cfp-2023.pycon.fr/cfp/">feel free to submit your conference or workshop
-            subject</a>.
-        </em>
-      </p>
-      <p>
-        You can submit conference and workshop subject until January 7<sup>th</sup>.
-      </p>
-    </section>
-
-    <section>
-      <h3>Participative Coding ("Sprints")</h3>
-      <p>
-        Thursday, February 16<sup>th</sup> and Friday, February 17<sup>th</sup>.
-      </p>
-      <p>
-        <em>
-          Schedule will be available in early February. If you want to participate, please
-          <a href="https://cfp-2023.pycon.fr/cfp/">submit your sprint subject</a>.
-        </em>
-      </p>
-      <p>
-        You can submit sprint subjects until January 7<sup>th</sup>.
-      </p>
-    </section>
-
-    {#
     <section>
       <h3>Calendar</h3>
       <p>
-        The calendar will be available soon.
-      </p>
-      <p>
-        The calendar is available below, in a <a class="button" href="{{ url_for('schedule', lang=lang) }}">fullscreen page</a>, or
-        <a class="button" href="{{ url_for('calendar') }}">in your favourite
-          calendar application</a>.
+        The calendar is available below, in a
+        <a href="{{ url_for('schedule', lang=lang) }}">fullscreen page</a>, or
+        <a href="{{ url_for('calendar') }}">in your favourite calendar application</a>.
       </p>
       <p>
         You can read the description of
-        <a href="{{ url_for('talks', lang=lang, category='keynote') }}">keynotes</a>,
-        <a href="{{ url_for('talks', lang=lang, category='conference') }}">talks</a>,
+        <a href="{{ url_for('talks', lang=lang, category='plenary') }}">plenary sessions</a>,
+        <a href="{{ url_for('talks', lang=lang, category='1h') }}">1-hour talks</a>,
+        <a href="{{ url_for('talks', lang=lang, category='30m') }}">30-minute talks</a>,
         <a href="{{ url_for('talks', lang=lang, category='workshop')}}">workshops</a> and
         <a href="{{ url_for('talks', lang=lang, category='sprint') }}">sprints</a>.
       </p>

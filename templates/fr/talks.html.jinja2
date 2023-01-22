@@ -1,29 +1,34 @@
 {% extends '_layout.jinja2' %}
 
 {% set days = {'2023-02-18': 'Samedi', '2023-02-19': 'Dimanche'} %}
-{% set titles = {'conference': 'Conférences', 'workshop': 'Ateliers', 'sprint': 'Sprints', 'keynote': 'Plénières'} %}
-{% set page_name = category %}
+{% set titles = {'30m': 'Conférences de 30 minutes', '1h': 'Conférences d’une heure', 'workshop': 'Ateliers', 'sprint': 'Sprints', 'plenary': 'Plénières'} %}
+{% set page_name = 'talks-' + category %}
 
 {% block content %}
-  <h2>{{ titles[category] }}</h2>
+  <article>
+    <h2>{{ titles[category] }}</h2>
 
-  {% for talk in talks %}
-    <article id="{{ talk.title|slug }}">
-      <h3><a href="#{{ talk.title|slug }}">{{ talk.title }}</a></h3>
-      <p>
-        Par {{ talk.person }}
-        {% if category == 'sprint' %}
-          {% if talk.id == '678' %}
-            − Vendredi de 10 h 00 à 18 h 00
+    {% for talk in talks %}
+      {% set talk_title_slug = talk.title | slug %}
+      <section id="{{ talk_title_slug }}">
+        <h3><a href="#{{ talk_title_slug }}">{{ talk.title }}</a></h3>
+        <p>
+          Par {{ talk.person }}
+          {% if category == 'sprint' %}
+            {% if talk.id == '30' %}
+              - Jeudi de 10 h 00 à 18 h 00
+            {% elif talk.id == '31' %}
+              - Vendredi de 10 h 00 à 18 h 00
+            {% else %}
+              − Jeudi et vendredi de 10 h 00 à 18 h 00
+            {% endif %}
           {% else %}
-            − Jeudi et vendredi de 10 h 00 à 18 h 00
+            − Salle {{ talk.room }}
+            − {{ days[talk.day] }} à {{ talk.start.replace(':', ' h ') }}
           {% endif %}
-        {% else %}
-          − Salle {{ talk.room }}
-          − {{ days[talk.day] }} à {{ talk.start.replace(':', ' h ') }}
-        {% endif %}
-      </p>
-      {{ talk.description | safe }}
-    </article>
-  {% endfor %}
+        </p>
+        {{ talk.description | safe }}
+      </section>
+    {% endfor %}
+  </article>
 {% endblock content %}
