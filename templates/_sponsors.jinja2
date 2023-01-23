@@ -161,6 +161,15 @@ Nos services comprennent du conseil, de l'implémentation, de la formation e
     </p>
     {% elif company == "CGWire" %}
     <p>CGWire facilite la collaboration des intervenants de films d'animation à travers Kitsu, une solution de gestion de production libre et open source. C'est une application web de gestion de projets adaptée au suivi d'un film animé. Elle permet aux équipes de communiquer facilement et de valider les livrables depuis n'importe où.</p>
+	{% elif company == "GitGuardian" %}
+	<p>GitGuardian, fondée en 2017 par Jérémy Thomas et Eric Fourrier, prix Start-up FIC 2021 et membre du <a href="https://lafrenchtech.com/fr/la-france-aide-les-startups/french-tech-120-2/">FT120</a>, s'est rapidement imposée comme le leader de la détection automatisée des secrets et se concentre désormais sur la fourniture d'une plateforme complète de sécurité du code. La société a levé 56 millions de dollars à ce jour auprès d'Eurazeo, de Sapphire, de Balderton et d'entrepreneurs tech notables comme Scott Chacon, cofondateur de GitHub, et Solomon Hykes, cofondateur de Docker.
+
+	GitGuardian aide les entreprises à détecter et à corriger les vulnérabilités du code source à chaque étape du cycle de vie du développement logiciel. Grâce au moteur de détection de GitGuardian les équipes de sécurité peuvent surveiller et appliquer des règles dans toutes leurs configurations VCS, outils DevOps et infrastructure-as-code.
+
+	GitGuardian Internal Monitoring est une plateforme automatisée de détection et de remédiation des secrets. En réduisant les risques d'exposition des secrets tout au long du SDLC, GitGuardian aide les organisations à renforcer leur posture de sécurité globale et à se conformer aux cadres et normes de sécurité des applications. Son moteur de détection est testé sur plus d'un milliard de commits publics GitHub chaque année, et il couvre plus de 350 types de secrets tels que les clés API, les strings de connexion aux bases de données, les clés privées, les certificats, etc.
+	La plateforme rapproche les équipes de sécurité et de développement grâce à des playbooks de remédiation automatisés et des fonctionnalités de collaboration pour résoudre les incidents rapidement et intégralement. En rapprochant les développeurs du processus de remédiation, les organisations peuvent réduire les délais de remédiation.
+
+	Largement adopté par les communautés de développeurs, GitGuardian est utilisé par plus de 200 000 développeurs et est l'application de sécurité n°1 sur la GitHub Marketplace. Des entreprises de premier plan font également confiance à GitGuardian, notamment Instacart, Snowflake, Orange, Iress, Maven Wave, NOW: Pensions, DataDog et PayFit.</p>
     {% endif %}
 
   {% elif lang == 'en' %}
@@ -308,6 +317,15 @@ Nos services comprennent du conseil, de l'implémentation, de la formation e
 
     {% elif company == "CGWire" %}
     <p>CGWire facilitates collaboration between all stakeholders of an animation movie production. We propose Kitsu, a free and open-source production manager. It's a project management web application adapted to animation movie tracking. It allows teams to communicate easily and review deliveries from anywhere.</p>
+    {% elif company == "GitGuardian" %}
+    <p>GitGuardian, founded in 2017 by Jérémy Thomas and Eric Fourrier, Start-up FIC 2021 prize and member of <a href="https://lafrenchtech.com/fr/la-france-aide-les-startups/french-tech-120 -2/">FT120</a>, has quickly established itself as the leader in automated secret detection and is now focused on providing a comprehensive code security platform. The company has raised $56 million to date from Eurazeo, Sapphire, Balderton, and notable tech entrepreneurs like GitHub co-founder Scott Chacon and Docker co-founder Solomon Hykes.
+
+    GitGuardian helps companies find and fix source code vulnerabilities at every stage of the software development lifecycle. With GitGuardian's detection engine, security teams can monitor and enforce rules across all their VCS configurations, DevOps tools, and infrastructure-as-code.
+
+    GitGuardian Internal Monitoring is an automated secrets detection and remediation platform. By reducing the risks of exposure of secrets throughout the SDLC, GitGuardian helps organizations strengthen their overall security posture and comply with application security frameworks and standards. Its detection engine is tested on over a billion public GitHub commits each year, and it covers over 350 types of secrets such as API keys, database connection strings, private keys, certificates, etc
+    The platform brings security and development teams together with automated remediation playbooks and collaboration features to resolve incidents quickly and comprehensively. By bringing developers closer to the remediation process, organizations can reduce remediation times.
+
+    Widely adopted by developer communities, GitGuardian is used by over 200,000 developers and is the #1 security application on the GitHub Marketplace. Leading companies also trust GitGuardian, including Instacart, Snowflake, Orange, Iress, Maven Wave, NOW: Pensions, DataDog, and PayFit.</p>
     {% endif %}
   {% endif %}
   </div>
@@ -322,21 +340,22 @@ Nos services comprennent du conseil, de l'implémentation, de la formation e
 
       'Or' if lang == 'fr' else 'Gold': {
           'Taipy': 'https://taipy.io/',
+          'GitGuardian': 'https://www.gitguardian.com/',
       },
 
       'Argent' if lang == 'fr' else 'Silver': {
-      'Entr\'ouvert': 'https://www.entrouvert.com/',
-      'Makina Corpus': 'https://makina-corpus.com/',
-      'CGWire': 'https://www.cg-wire.com/',
+	  'Entr\'ouvert': 'https://www.entrouvert.com/',
+	  'Makina Corpus': 'https://makina-corpus.com/',
+	  'CGWire': 'https://www.cg-wire.com/',
       },
 
       'Bronze': {
-      'Alkivi': 'https://github.com/alkivi-sas/',
-      'MyBeezBox': 'https://www.mybeezbox.com/',
-      'Emencia': 'https://www.emencia.com/',
-      'Yaal Coop': 'https://yaal.coop/',
-      'Mergify': 'https://mergify.com/',
-      'Camptocamp': 'https://www.camptocamp.com/',
+	  'Alkivi': 'https://github.com/alkivi-sas/',
+	  'MyBeezBox': 'https://www.mybeezbox.com/',
+	  'Emencia': 'https://www.emencia.com/',
+	  'Yaal Coop': 'https://yaal.coop/',
+	  'Mergify': 'https://mergify.com/',
+	  'Camptocamp': 'https://www.camptocamp.com/',
       },
 
       'Cœur' if lang == 'fr' else 'Heart': {
