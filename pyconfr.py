@@ -28,7 +28,7 @@ def slug(string):
 @app.route('/2023/<lang>/<name>.html')
 def page(name='index', lang='fr'):
     return render_template(
-        f'{lang}/{name}.html.jinja2', page_name=name, lang=lang)
+        f'{lang}/{name}.jinja2.html', page_name=name, lang=lang)
 
 
 @app.route('/2023/<lang>/talks/<category>.html')
@@ -49,7 +49,7 @@ def talks(lang, category):
                 talk['description'] = Markdown().convert(talk['description'])
             talks.append(talk)
     return render_template(
-        f'{lang}/talks.html.jinja2', category=category, talks=talks, lang=lang)
+        f'{lang}/talks.jinja2.html', category=category, talks=talks, lang=lang)
 
 
 @app.route('/2023/<lang>/full-schedule.html')
@@ -90,7 +90,7 @@ def schedule(lang):
             link = soup.new_tag('a', href=href, target='_parent')
             title.wrap(link)
 
-    return render_template('schedule.html.jinja2', data=soup)
+    return render_template('schedule.jinja2.html', data=soup)
 
 
 @app.route('/2023/pyconfr-2023.ics')
