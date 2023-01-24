@@ -161,6 +161,8 @@ Nos services comprennent du conseil, de l'implémentation, de la formation e
     </p>
     {% elif company == "CGWire" %}
     <p>CGWire facilite la collaboration des intervenants de films d'animation à travers Kitsu, une solution de gestion de production libre et open source. C'est une application web de gestion de projets adaptée au suivi d'un film animé. Elle permet aux équipes de communiquer facilement et de valider les livrables depuis n'importe où.</p>
+    {% elif company == "GitGuardian" %}
+    <p>GitGuardian est une startup française de cybersécurité spécialiste des solutions de sécurité du code pour la génération DevOps. Leader sur le marché de la détection et de la remédiation des secrets, ses solutions sont déjà utilisées par des centaines de milliers de développeurs dans tous les secteurs. GitGuardian aide les équipes de développement, d'opérations cloud, de sécurité et conformité à sécuriser le développement logiciel, à définir et appliquer les politiques à l'ensemble de leurs systèmes. Les solutions de GitGuardian surveillent les dépôts de code publics et privés en temps réel, détectent les secrets et alertent pour permettre une remédiation rapide.</p>
     {% endif %}
 
   {% elif lang == 'en' %}
@@ -308,6 +310,12 @@ Nos services comprennent du conseil, de l'implémentation, de la formation e
 
     {% elif company == "CGWire" %}
     <p>CGWire facilitates collaboration between all stakeholders of an animation movie production. We propose Kitsu, a free and open-source production manager. It's a project management web application adapted to animation movie tracking. It allows teams to communicate easily and review deliveries from anywhere.</p>
+    {% elif company == "GitGuardian" %}
+    <p>
+GitGuardian is a global cybersecurity startup focusing on code security solutions for the DevOps generation. A leader in the market of secrets detection and remediation, its solutions are already used by hundred thousands developers in all industries.
+GitGuardian helps developers, cloud operation, security and compliance professionals secure software development, define and enforce policies consistently and globally across all their systems.
+GitGuardian solutions monitor public and private repositories in real-time, detect secrets and alert to allow investigation and quick remediation.
+    </p>
     {% endif %}
   {% endif %}
   </div>
@@ -322,21 +330,22 @@ Nos services comprennent du conseil, de l'implémentation, de la formation e
 
       'Or' if lang == 'fr' else 'Gold': {
           'Taipy': 'https://taipy.io/',
+          'GitGuardian': 'https://www.gitguardian.com/',
       },
 
       'Argent' if lang == 'fr' else 'Silver': {
-      'Entr\'ouvert': 'https://www.entrouvert.com/',
-      'Makina Corpus': 'https://makina-corpus.com/',
-      'CGWire': 'https://www.cg-wire.com/',
+	  'Entr\'ouvert': 'https://www.entrouvert.com/',
+	  'Makina Corpus': 'https://makina-corpus.com/',
+	  'CGWire': 'https://www.cg-wire.com/',
       },
 
       'Bronze': {
-      'Alkivi': 'https://github.com/alkivi-sas/',
-      'MyBeezBox': 'https://www.mybeezbox.com/',
-      'Emencia': 'https://www.emencia.com/',
-      'Yaal Coop': 'https://yaal.coop/',
-      'Mergify': 'https://mergify.com/',
-      'Camptocamp': 'https://www.camptocamp.com/',
+	  'Alkivi': 'https://github.com/alkivi-sas/',
+	  'MyBeezBox': 'https://www.mybeezbox.com/',
+	  'Emencia': 'https://www.emencia.com/',
+	  'Yaal Coop': 'https://yaal.coop/',
+	  'Mergify': 'https://mergify.com/',
+	  'Camptocamp': 'https://www.camptocamp.com/',
       },
 
       'Cœur' if lang == 'fr' else 'Heart': {
