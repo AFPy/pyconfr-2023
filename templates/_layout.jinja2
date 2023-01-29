@@ -9,10 +9,11 @@
   ('support', ('Nous soutenir', 'Support Us')),
 ) -%}
 {%- set EXTRA_PAGES = (
-  ('keynote', ('Plénières', 'Keynotes')),
-  ('conference', ('Conférences', 'Talks')),
-  ('workshop', ('Ateliers', 'Workshops')),
-  ('sprint', ('Sprints', 'Sprints')),
+  ('talks-plenary', ('Plénières', 'Plenary Sessions')),
+  ('talks-1h', ('Conférences d’une heure', '1-hour Talks')),
+  ('talks-30m', ('Conférences de 30 minutes', '30-minute Talks')),
+  ('talks-workshop', ('Ateliers', 'Workshops')),
+  ('talks-sprint', ('Sprints', 'Sprints')),
 ) -%}
 
 {%- set title = dict(MENU + EXTRA_PAGES).get(page_name, ['Bordeaux', 'Bordeaux'])[1 if lang == 'en' else 0] -%}
@@ -45,6 +46,18 @@
         {% endfor %}
       </ul>
     </nav>
+
+    {% if request.endpoint == 'talks' %}
+      <nav>
+        <ul>
+          {% for endpoint, (title_fr, title_en) in EXTRA_PAGES %}
+            <li class="{{ 'active' if page_name == endpoint }}">
+              <a href="{{ url_for('talks', lang=lang, category=endpoint.split('-')[1]) }}">{{ title_en if lang == 'en' else title_fr }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    {% endif %}
 
     {% if request.endpoint == 'page' %}
       <aside>
