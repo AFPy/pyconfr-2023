@@ -90,6 +90,9 @@ def schedule(lang):
             link = soup.new_tag('a', href=href, target='_parent')
             title.wrap(link)
 
+    for tag in soup.findAll(lambda tag: 'style' in tag.attrs):
+        del tag.attrs['style']
+
     return render_template('schedule.jinja2.html', data=soup)
 
 
