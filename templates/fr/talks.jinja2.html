@@ -15,13 +15,7 @@
         <p>
           Par {{ talk.person }}
           {% if category == 'sprint' %}
-            {% if talk.id == '30' %}
-              - Jeudi de 10 h 00 à 18 h 00
-            {% elif talk.id == '31' %}
-              - Vendredi de 10 h 00 à 18 h 00
-            {% else %}
-              − Jeudi et vendredi de 10 h 00 à 18 h 00
-            {% endif %}
+            − Jeudi et vendredi de 10 h 00 à 18 h 00
           {% else %}
             − Salle {{ talk.room }}
             − {{ days[talk.day] }} à {{ talk.start.replace(':', ' h ') }}
