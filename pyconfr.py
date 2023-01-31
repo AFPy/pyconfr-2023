@@ -93,7 +93,7 @@ def schedule(lang):
     for tag in soup.find_all(lambda tag: 'style' in tag.attrs):
         del tag.attrs['style']
 
-    return render_template('schedule.jinja2.html', data=soup)
+    return render_template('schedule.jinja2.html', lang=lang, data=soup)
 
 
 @app.route('/2023/pyconfr-2023.ics')

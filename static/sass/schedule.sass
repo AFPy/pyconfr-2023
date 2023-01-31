@@ -39,6 +39,7 @@ tr:nth-child(2), tr:nth-child(3)
   display: none
 
 td
+  position: relative
   padding: 1.5em 0.5em
   text-align: center
 
@@ -53,3 +54,30 @@ a
 
 td:not(:hover) a
   text-decoration: inherit
+
+[bgcolor]::before
+  background: #fff5
+  border-radius: 0 0 0 1em
+  font-size: 0.7em
+  padding: 0.25em 0.5em 0.25em 0.75em
+  position: absolute
+  right: 0
+  top: 0
+
+[bgcolor="#f6b36a"]::before
+  content: "30 mn"
+
+[bgcolor="#fe6f61"]::before
+  content: "1 h"
+
+[lang="en"] [bgcolor="#378899"]::before
+  content: "workshop"
+
+[lang="fr"] [bgcolor="#378899"]::before
+  content: "atelier"
+
+[lang="en"] [bgcolor="#fce16b"]::before
+  content: "plenary"
+
+[lang="fr"] [bgcolor="#fce16b"]::before
+  content: "plénière"
