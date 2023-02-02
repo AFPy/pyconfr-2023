@@ -7,6 +7,11 @@
 {% block content %}
   <article>
     <h2>{{ titles[category] }}</h2>
+    {% if category == 'sprint' %}
+    <p>
+      La liste et les horaires des sprints sont définies. Pour les derniers détails d'organisation, consultez les personnes à l'accueil ou l'affichage proche.
+    </p>
+    {% endif %}
 
     {% for talk in talks %}
       {% set talk_title_slug = talk.title | slug %}
