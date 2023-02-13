@@ -23,7 +23,17 @@ table
     font-style: normal
     margin-top: 0.5em
 
+tr td:first-child[colspan]
+  background: white
+  position: sticky
+  top: 5em
+  z-index: 1
+
+  h3
+    margin: 0
+
 tr:first-child
+  height: 5em
   position: sticky
   top: 0
   z-index: 1
@@ -41,11 +51,6 @@ td
   position: relative
   padding: 1.5em 0.5em
   text-align: center
-
-td:first-child
-  background: white
-  left: 0
-  position: sticky
 
 a
   color: inherit
