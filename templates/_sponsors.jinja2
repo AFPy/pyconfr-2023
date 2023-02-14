@@ -167,6 +167,15 @@ Nos services comprennent du conseil, de l'implémentation, de la formation e
 <p>Au début des années 2000, la communauté Mozilla a construit Firefox. Nous avons renversé le monopole des navigateurs, donné aux utilisateurs le choix et le contrôle, et aidé à créer un Internet plus sain. 20 ans plus tard, Mozilla continue de se battre pour cet Internet sain – un Internet où la Big Tech est tenue responsable et où les utilisateurs ont un véritable pouvoir sur leur vie en ligne. Aujourd'hui, Internet façonne l'économie, influence les gouvernements et est au cœur de milliards de vies. Mais que l'Internet promeuve la démocratie, l'ouverture des marchés et la liberté d'expression ou la polarisation, la surveillance de masse et la désinformation dépendent de nous. Mozilla travaille au-delà des frontières, des disciplines et des technologies pour faire respecter des principes tels que la confidentialité, l'inclusion et la décentralisation en ligne. Nos tactiques sont variées, mais notre vision est singulière : un mouvement robuste pour un Internet sain.</p>
     {% elif company == "Alma" %}
 <p>Alma est une retailtech et fintech fondée en 2018. Nous proposons des solutions de paiement flexibles pour les boutiques physiques et en ligne, avec le paiement en 2, 3 ou 4 fois et en différé. Notre solution de paiement s’applique également aux particuliers avec l’app et la carte Alma. Nous priorisons l’expérience et la satisfaction de nos clients avec des outils simples et agréables à utiliser. Présents dans une dizaine de pays européens, nous travaillons avec plus de 7500 grandes marques comme Sncf, Maisons du Monde, Nature & Découvertes, Etam, Printemps, Afflelou, Emma, Perfectstay…</p>
+    {% elif company == 'Clever Cloud' %}
+      <p>
+        Clever Cloud est une entreprise de PaaS Française. Nous aidons les
+        développeurs à déployer leurs applications en production avec une
+        infrastructure sans faille, à un prix juste et des fonctionnalités
+        modernes comme la scalabilité automatique ou le blue-green
+        deployment. Nous construisions un service facile à utiliser, sans
+        verrou éditeur et pouvant grossir selon vos besoins.
+      </p>
     {% endif %}
 
   {% elif lang == 'en' %}
@@ -324,6 +333,13 @@ GitGuardian solutions monitor public and private repositories in real-time, dete
 <p>In the early 2000s, the Mozilla community built Firefox. We toppled the browser monopoly, gave users choice and control online, and helped create a healthier Internet. 20 years later, Mozilla continues to fight for a healthy Internet — one where Big Tech is held accountable and individual users have real agency online. Today, the Internet is everywhere. It shapes economies, influences governments, and is central to billions of lives. But whether the Internet promotes democracy, open markets, and free expression or polarization, mass surveillance, and misinformation is up to us. Mozilla works across borders, disciplines, and technologies to uphold principles like privacy, inclusion and decentralization online. Our tactics are varied, but our vision is singular: a robust movement for Internet health.</p>
     {% elif company == "Alma" %}
 <p>Alma is a fintech founded in 2018. We offer flexible payment solutions for physical and online stores, with deferred payment and 2, 3, or 4 installments. We also help consumers stay in control of their budget with the Alma app and card. We prioritize the experience and satisfaction of our customers with simple and pleasant to use tools. We operate in ten European countries and work with more than 7500 major brands such as Maisons du Monde, Nature et Découvertes, Etam, Le Slip Français, Jacquemus, Maje…</p>
+    {% elif company == 'Clever Cloud' %}
+      <p>
+        Clever Cloud help developers to deploy and run their apps with
+        bulletproof infrastructure, automatic scaling, fair pricing and other
+        cool features. We aim to make an easy-to-use service, without any
+        vendor lock-in and able to grow with your needs.
+      </p>
     {% endif %}
   {% endif %}
   </div>
@@ -340,6 +356,7 @@ GitGuardian solutions monitor public and private repositories in real-time, dete
           'Taipy': 'https://taipy.io/',
           'GitGuardian': 'https://www.gitguardian.com/',
           'Alma': 'https://almapay.com/',
+          'Clever Cloud': 'https://www.clever-cloud.com/',
       },
 
       'Argent' if lang == 'fr' else 'Silver': {
